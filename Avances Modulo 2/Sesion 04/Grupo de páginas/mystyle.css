@@ -1,0 +1,104 @@
+header {
+  background: rgba(141, 4, 4, 0.342);
+  border-radius: 2rem;
+  width: 570px;
+  padding: 2.5rem 2.5rem;
+  margin: auto;
+}
+
+body {
+  background-image: url("https://i1.wp.com/s-media-cache-ak0.pinimg.com/736x/22/4f/72/224f72ffc213823cd0180886bbafbdf4.jpg?w=1920&ssl=1");
+  background-size: 85rem;
+  background-attachment: fixed;
+  font-family: Georgia, "Times New Roman",
+    Times, serif;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  color: rgb(255, 255, 255);
+  }
+ul.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 0em;
+  left: 0em;
+  width: 15em;
+  }
+
+ul.navbar li {
+  background: rgba(141, 4, 4, 0.342);
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border-right: 1em solid rgba(140, 30, 173, 0.295) 
+  }
+ul.navbar a {
+  text-decoration: none 
+  }
+
+a:link {
+  color: rgb(255, 255, 255)
+  }
+  
+a:visited {
+  color: rgb(255, 255, 255) 
+  }
+
+form {
+  background: rgba(141, 4, 4, 0.342);
+  border-radius: 2rem;
+  width: 570px;
+  padding: 2.5rem 2.5rem;
+  margin: auto;
+  }
+img {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  }
+
+  .general {
+    max-width: 30em;
+    }
+  
+  div {
+    width: 30em;
+    }
+  
+  textarea {
+    resize: none;
+    width: 30em;
+    height: 13em; 
+    }
+  
+  .images {
+    background: rgba(141, 4, 4, 0.342);
+    background-size: auto;
+    border-radius: 2rem;
+    width: 61%;
+    padding: 2.5rem 2.5rem;
+    margin: auto ;
+    }
+  
+  .table1 {
+    background-size: auto;
+    width: 570px;
+    margin: auto ;
+  }
+  
+  .table2 {
+    color: white;
+    background: rgba(141, 4, 4, 0.342);
+    background-size: auto;
+    width: 570px;
+    padding: 2.5rem 2.5rem;
+    margin: auto ;
+  }
+  
+  .row {
+    margin-left: 40vh;
+  }

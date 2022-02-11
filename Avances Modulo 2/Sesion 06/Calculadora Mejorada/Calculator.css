@@ -1,0 +1,27 @@
+body {
+    background-image: url("https://previews.123rf.com/images/cherezoff/cherezoff1801/cherezoff180100307/93024587-fondo-abstracto-con-n%C3%BAmeros-volar-n%C3%BAmeros-sobre-fondo-negro.jpg");
+    background-size: 85rem;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, "Times New Roman",
+      Times, serif;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    color: rgb(255, 255, 255);
+  }
+
+header {
+    background: rgba(161, 23, 46, 0.664);
+    border-radius: 2rem;
+    width: 400px;
+    padding: 2.5rem 2.5rem;
+    margin: auto;
+}
+
+.main {
+    background: rgba(161, 23, 46, 0.664);
+    border-radius: 2rem;
+    width: 400px;
+    padding: 2.5rem 2.5rem;
+    margin: auto;
+}

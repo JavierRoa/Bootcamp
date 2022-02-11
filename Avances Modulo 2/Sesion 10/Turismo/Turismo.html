@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2560/2560124.png"></link>
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css" ></link>
+    <link rel="stylesheet" href="mystyle.css">
+    <script defer src="Turismo.js"></script>
+    <script defer src= "bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="survey-form" action="Turismo.html" class="was-validated" method="post">
+      <h1>Registro</h1>
+      <div class="general">
+        <div>
+          <label for="inputName">Nombre:</label>
+          <input type="text"  class="form-control" name="name" placeholder="Ingrese su nombre" title="Ej: Jorge, Claudia, etc." pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"></input>
+          <div class="invalid-feedback">
+            Ingrese un nombre válido
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="age">Edad:</label>
+          <input type="number" class="form-control" name="age" placeholder="0" title="Valor entre 15 y 99" min="15" max="99"></input>
+          <div class="invalid-feedback">
+            Ingrese una edad entre 15 y 99
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="address">Dirección:</label>
+          <input type="text" class="form-control" name="address" placeholder="Ingrese su dirección" title="Ej: Tangamandapio 123" minlength="5"></input>
+          <div class="invalid-feedback">
+            Ingrese una dirección
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="weight">Peso:</label>
+          <input type="number" class="form-control" name="weight" placeholder="0" title="Valores válidos entre 50 y 120" min="50" max="120"></input>
+          <div class="invalid-feedback">
+            Ingrese un valor válido
+          </div>
+        </div>
+        <br>
+        <p>¿Cuenta con buena salud?</p>
+        <div>
+          <input type="radio" id="allergies" name="allergy" value="yes"></input>
+          <label for="allergies">Si</label>
+        </div>
+        <div>
+          <input type="radio" id="allergies" name="allergy" value="no"></input>
+          <label for="allergies">No</label>
+        </div>
+        <p>¿Es usted alérgico a algún medicamento?</p>
+        <div>
+          <input type="radio" id="allergies" name="allergy" value="yes"></input>
+          <label for="allergies">Si</label>
+        </div>
+        <div>
+          <input type="radio" id="allergies" name="allergy" value="no"></input>
+          <label for="allergies">No</label>
+        </div>
+        <br>
+        <div>
+          <p>En caso de ser alérgico, escriba a qué medicamentos:</p>
+          <textarea placeholder="Ej: Paracetamol" title="Por su seguridad, sea preciso en esta información"></textarea>
+        </div>
+        <br>
+        <div>
+          <button id="button" type="submit" class="btn btn-primary btn-lg">Ingresar Datos</button>
+          <p id="enviado"></p>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  background-image: url("https://i1.wp.com/s-media-cache-ak0.pinimg.com/736x/22/4f/72/224f72ffc213823cd0180886bbafbdf4.jpg?w=1920&ssl=1");
+  background-size: 85rem;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Georgia, "Times New Roman",
+    Times, serif;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+form {
+  background: rgba(141, 4, 4, 0.342);
+  border-radius: 2rem;
+  width: 570px;
+  padding: 2.5rem 2.5rem;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 30em;
+  }
+
+textarea {
+  resize: none;
+  width: 30em;
+  height: 13em; 
+}
