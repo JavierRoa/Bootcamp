@@ -1,0 +1,33 @@
+body {
+  background-image: url("https://www.entornoturistico.com/wp-content/uploads/2016/01/turismo-1280x720.jpg");
+  background-size: 85rem;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Georgia, "Times New Roman",
+    Times, serif;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  color: rgb(255, 255, 255);
+}
+
+form {
+  background: rgba(141, 4, 4, 0.342);
+  border-radius: 2rem;
+  width: 570px;
+  padding: 2.5rem 2.5rem;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 30em;
+  }
+
+textarea {
+  resize: none;
+  width: 30em;
+  height: 13em; 
+}

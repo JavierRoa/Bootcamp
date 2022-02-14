@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2560/2560124.png"></link>
+    <link rel="Stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script defer src="Turismo2.js"></script>
+    <title>Turismo</title>
+</head>
+<body>
+    <form id="survey-form" class="was-validated" method="post">
+      <h1>Registro</h1>
+      <div class="general">
+        <div>
+          <label for="inputName">Nombre:</label>
+          <input required type="text"  class="form-control" name="name" placeholder="Ingrese su nombre" title="Ej: Jorge, Claudia, etc." pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"></input>
+          <div class="invalid-feedback">
+            Ingrese un nombre válido
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="age">Edad:</label>
+          <input required type="number" class="form-control" name="age" placeholder="0" title="Valor entre 15 y 99" min="15" max="99"></input>
+          <div class="invalid-feedback">
+            Ingrese una edad entre 15 y 99
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="address">Dirección:</label>
+          <input required type="text" class="form-control" name="address" placeholder="Ingrese su dirección" title="Ej: Tangamandapio 123" minlength="5"></input>
+          <div class="invalid-feedback">
+            Ingrese una dirección
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="weight">Peso:</label>
+          <input required type="number" class="form-control" name="weight" placeholder="0" title="Valores válidos entre 50 y 120" min="50" max="120"></input>
+          <div class="invalid-feedback">
+            Ingrese un valor válido
+          </div>
+        </div>
+        <br>
+        <p>¿Cuenta con buena salud?</p>
+        <div>
+          <input required type="radio" id="allergies" name="allergy" value="yes"></input>
+          <label for="allergies">Si</label>
+        </div>
+        <div>
+          <input required type="radio" id="allergies" name="allergy" value="no"></input>
+          <label for="allergies">No</label>
+        </div>
+        <p>¿Es usted alérgico a algún medicamento?</p>
+        <div>
+          <input required type="radio" id="allergies" name="allergy2" value="yes"></input>
+          <label for="allergies">Si</label>
+        </div>
+        <div>
+          <input required type="radio" id="allergies" name="allergy2" value="no"></input>
+          <label for="allergies">No</label>
+        </div>
+        <br>
+        <div>
+          <p>En caso de ser alérgico, escriba a qué medicamentos:</p>
+          <textarea placeholder="Ej: Paracetamol" title="Por su seguridad, sea preciso en esta información"></textarea>
+        </div>
+        <br>
+        <div>
+          <button id="button" type="submit" class="btn btn-primary btn-lg">Ingresar Datos</button>
+        </div>
+      </div>
+</body>
+</html>
