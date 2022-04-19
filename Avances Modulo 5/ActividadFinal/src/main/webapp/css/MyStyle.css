@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(https://cdn-3.expansion.mx/dims4/default/d1e0db3/2147483647/strip/true/crop/1600x800+0+0/resize/1200x600!/format/webp/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fc5%2F0b%2Fe34e29814256b34a83bae2e21a71%2F18baab22b54503ecdd051ea3dc5b9dd5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(8, 8, 8, 0.432);
+    background-blend-mode: darken;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+th, td, tr {
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+#menu1, #menu2 {
+	
+	color: rgba(141, 4, 4, 0.342);
+}
+#formulario, table {
+
+	background: rgba(141, 4, 4, 0.342);
+	border-radius: 2rem;
+	padding: 2.5rem 2.5rem;
+}
+
+textarea {
+	resize: none;
+	width: 15em;
+	height: 10em; 
+}
+h1 {
+	text-align: center;
+}
+
+/*diseño de borde a las fuentes en las etiquetas indicadas*/
+label, p{
+	font-size: 20px;
+
+}
+
+::placeholder{
+    font-size: small;
+}
+
+/* Formato del texto de la etiqueta de error */
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Formato del fondo de la etiqueta de error */
+label.error.fail-alert {
+    border-radius: 4px;
+    line-height: 1;
+    padding: 2px 0 6px 6px;
+    background: #ffe6eb;
+}
+
+/* Formato de borde de campo validado correctamente */
+input.valid.success-alert, select.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+}
+
+/* Formato de texto y color de borde del campo que presenta error al validar */
+input.error, select.error {
+    border: 1px solid red; /* Borde con linea entrecortada color rojo */
+    font-weight: 300;
+    color: red; /* Color de fuente rojo */
+}
