@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="Stylesheet" href="/MyStyle.css">
+<title>Tabla Marcas</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col col-lg-7">
+				<table class="table text-light" id="table">
+					<thead>
+						<tr>
+							<th scope="col">ID</th>
+							<th scope="col">Marca</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="marca : ${marca}">
+							<td th:text="${marca.id}"></td>
+							<td th:text="${marca.marca}"></td>
+							<td>
+								<a class="button-78" role="button">Eliminar</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+		<div class="">
+			<a class="button-78" role="button" href="/registroProducto">Registrar Producto</a>
+			<a class="button-78" role="button" href="/registroMarca">Registrar Marca</a>
+			<a class="button-78" role="button" href="/registroProveedor">Registrar Proveedor</a>
+		</div>
+</body>
+</html>

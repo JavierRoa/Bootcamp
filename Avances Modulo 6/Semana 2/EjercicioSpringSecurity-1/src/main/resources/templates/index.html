@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="Stylesheet" href="/css/MyStyle.css">
+<title>Productos</title>
+</head>
+<body>
+	<div class="col-md-12 d-flex justify-content-center" id="menuindex">
+		<form class="form" th:action="@{/logout}" method="post">
+			<button class="button-78" role="button" type="submit" value="Cerrar Sesión">Cerrar Sesión</button>
+		</form>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<form  th:action="@{/filtro}" method="post">
+					<select name="productScale">
+						<option value="">Escala</option>
+						<option value="1:10">1:10</option>
+						<option value="1:12">1:12</option>
+						<option value="1:18">1:18</option>
+						<option value="1:24">1:24</option>
+						<option value="1:32">1:32</option>
+						<option value="1:50">1:50</option>
+						<option value="1:72">1:72</option>
+						<option value="1:700">1:700</option>
+					</select>
+					<select name="productLine">
+						<option value="">Línea</option>
+						<option th:each="lin : ${lineas}" th:value="${lin.productLine}"  th:text="${lin.productLine}" ></option>
+					</select>
+					<select name="productVendor">
+						<option value="">Vendedor</option>
+						<option value="Autoart Studio Design">Autoart Studio Design</option>
+						<option value="Carousel DieCast Legends">Carousel DieCast Legends</option>
+						<option value="Classic Metal Creations">Classic Metal Creations</option>
+						<option value="Exoto Designs">Exoto Designs</option>
+						<option value="Gearbox Collectibles">Gearbox Collectibles</option>
+						<option value="Highway 66 Mini Classics">Highway 66 Mini Classics</option>
+						<option value="Min Lin Diecast">Min Lin Diecast</option>
+						<option value="Motor City Art Classics">Motor City Art Classics</option>
+						<option value="Red Start Diecast">Red Start Diecast</option>
+						<option value="Second Gear Diecast">Second Gear Diecast</option>
+						<option value="Studio M Art Models">Studio M Art Models</option>
+						<option value="Unimax Art Galleries">Unimax Art Galleries</option>
+						<option value="Welly Diecast Productions">Welly Diecast Productions</option>
+					</select>
+					<button class="button-78" role="button" type="submit" value="Filtrar">Filtrar</button>
+				</form>														
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col col-lg-12">
+				<table class="table table-bordered text-light" id="table">
+					<thead>
+						<tr>
+							<th scope="col">Código Producto</th>
+							<th sec:authorize="hasAuthority('ADMIN')" scope="col">Precio Compra</th>
+							<th scope="col">Precio Venta</th>
+							<th scope="col">Descripción</th>
+							<th scope="col">Escala</th>
+							<th scope="col">Vendedor</th>
+							<th scope="col">Stock</th>
+							<th scope="col">Línea de Producto</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="pro : ${productos}">
+							<td th:text="${pro.productCode}"></td>
+							<td sec:authorize="hasAuthority('ADMIN')"
+								th:text="${pro.buyPrice}"></td>
+							<td th:text="${pro.msrp}"></td>
+							<td th:text="${pro.productDescription}"></td>
+							<td th:text="${pro.productScale}"></td>
+							<td th:text="${pro.productVendor}"></td>
+							<td th:text="${pro.quantityInStock}"></td>
+							<td th:text="${pro.productline.productLine}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

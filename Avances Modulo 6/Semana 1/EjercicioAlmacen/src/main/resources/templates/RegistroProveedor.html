@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="Stylesheet" href="/MyStyle.css">
+<title>Registro Proveedor</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col-lg-6">
+			<h1>REGISTRO PROVEEDOR</h1>
+			<form th:action="@{/registroProveedor}" method="post" th:object="${miProveedor}">
+				<div class="form-group">
+					<label th:for="producto">Producto</label>
+					<input class="form-control" type="text" name="producto" placeholder="Producto" th:field="*{producto}">
+					<span th:if="${#fields.hasErrors('producto')}" th:errors="*{producto}">Producto error</span>
+				</div>
+				<div class="form-group">
+					<label th:for="stock">Stock</label>
+					<input class="form-control" type="number" name="stock" placeholder="Stock" th:field="*{stock}">
+					<span th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}">Stock error</span>
+				</div>
+				<div class="form-group">
+					<label th:for="precioCompra">Precio de Compra</label>
+					<input class="form-control" type="number" name="precioCompra" placeholder="PrecioCompra" th:field="*{precioCompra}">
+					<span th:if="${#fields.hasErrors('precioCompra')}" th:errors="*{precioCompra}">Error en el precio de compra</span>
+				</div>
+				<div class="form-group">
+					<label th:for="precioVenta">Precio de Venta</label>
+					<input class="form-control" type="number" name="precioVenta" placeholder="PrecioVenta" th:field="*{precioVenta}">
+					<span th:if="${#fields.hasErrors('precioVenta')}" th:errors="*{precioVenta}">Error en el precio de venta</span>
+				</div>
+				<div class="form-group">
+					<label th:for="marca">Marca</label>
+					<select class="form-control" th:field="*{marca}">
+						<option value="">Seleccione una marca</option>
+						<option th:each="marca : ${marca}" th:value="${marca.id}" th:text="${marca.marca}"></option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label th:for="proveedor">Proveedor</label>
+					<select class="form-control" th:field="*{proveedor}">
+						<option value="">Seleccione un proveedor</option>
+						<option th:each="prov : ${proveedor}" th:value="${prov.rut}" th:text="${prov.vendedor}"></option>
+					</select>
+				</div>
+				<br>
+				<div>
+					<button class="button-78" role="button">Agregar Producto</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
